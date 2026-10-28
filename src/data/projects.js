@@ -4,6 +4,7 @@ import gardenGuardianImg from '../images/GardenGuardian.webp'
 import capsuleClashImg from '../images/capsule-clash.webp'
 import ivrImg from '../images/vex_thumbnail.webp'
 import knossosImg from '../images/knossosCapitalist.webp'
+import headshotImg from '../images/headshot.jpg'
 
 const placeholder = `${import.meta.env.BASE_URL}thumbnails/placeholder.svg`
 
@@ -13,8 +14,7 @@ export const site = {
   github: 'https://github.com/brody-b9801',
   linkedin: 'https://www.linkedin.com/in/brody-blask/',
   email: 'brodymb2@illinois.edu',
-  // Import an image (like the thumbnails above) and set it here to show a profile photo.
-  photo: null,
+  photo: headshotImg,
 }
 
 export const sections = [

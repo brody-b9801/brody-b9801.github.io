@@ -42,13 +42,25 @@ body {
     text-align: center;
     font-family: "VT323", monospace;
     font-size: 20px;
-    background-color: rgb(255, 214, 170);
+    /* The page itself is the navbar color, so anything past the content
+       (like a phone's overscroll below the footer) matches the bars. The
+       peach is on .content instead. */
+    background-color: var(--bar-color);
     color: white;
     text-shadow:
         -1px 0 0 black,
          1px 0 0 black,
          0 -1px 0 black,
          0  1px 0 black;
+}
+
+/* Everything between the navbar and footer. flow-root keeps the first
+   child's top margin inside so the peach reaches the navbar. */
+.content {
+    display: flow-root;
+    margin-inline: -20px;
+    padding-inline: 20px;
+    background-color: rgb(255, 214, 170);
 }
 
 /* Scale all text (and the em-sized photo and buttons) up on wide screens. */
@@ -341,9 +353,10 @@ section:nth-of-type(odd)::after {
 
 .profilePhoto img {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 88%;
+    height: 88%;
     object-fit: cover;
+    border-radius: 50%;
 }
 
 .buttonContainer {
